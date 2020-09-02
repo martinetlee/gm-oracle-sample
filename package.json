@@ -1,0 +1,26 @@
+{
+  "name": "gm-oracle-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinetlee/gm-oracle-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinetlee/gm-oracle-sample/issues"
+  },
+  "homepage": "https://github.com/martinetlee/gm-oracle-sample#readme",
+  "dependencies": {
+    "godmode-for-test": "0.0.4",
+    "truffle": "^5.1.42"
+  }
+}

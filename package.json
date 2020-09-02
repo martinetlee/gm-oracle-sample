@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/martinetlee/gm-oracle-sample#readme",
   "dependencies": {
-    "godmode-for-test": "0.0.4",
+    "bn.js": "^5.1.3",
+    "godmode-for-test": "0.0.5",
     "truffle": "^5.1.42"
   }
 }

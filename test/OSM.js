@@ -22,20 +22,22 @@ contract("OSM GodMode Demo", function(accounts) {
     it("GODMODE: OSM read and write", async function() {
       // console.log(await osmContract.read({from: Alice})); // this will fail
 
-      // This will succeed, but bytes32 is not very nice to read.
-      //await GODMODE.executeAs(osmContract, GMOSM, "kiss", Alice, {from: Alice});
-      //console.log(await osmContract.read({from: Alice}));
-
       let osmContract = await OSM.at(
         "0x81FE72B5A8d1A857d176C3E7d5Bd2679A9B85763"
       );
+
+      // This will succeed, but bytes32 is not very nice to read.
+      await GODMODE.executeAs(osmContract, GMOSM, "kiss", Alice, {
+        from: Alice,
+      });
+      let price = await osmContract.read({ from: Alice });
+      console.log(BN(price).toString());
 
       var tx = await GODMODE.executeAs(osmContract, GMOSM, "readCurVal", {
         from: Alice,
       });
 
       //console.log(tx.logs[0].args.ret.toString());
-
       await GODMODE.executeAs(osmContract, GMOSM, "setCurVal", 50000000, {
         from: Alice,
       });
